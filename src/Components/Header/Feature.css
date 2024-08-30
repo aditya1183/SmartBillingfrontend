@@ -1,0 +1,142 @@
+/**********************************/
+/********** Section Header CSS ***********/
+/**********************************/
+.section-header {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto 45px auto;
+    padding-bottom: 20px;
+}
+
+.section-header::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    left: calc(50% - 25px);
+    bottom: 10px;
+    background: #FFD662;
+}
+
+.section-header::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    left: calc(50% - 50px);
+    bottom: 0;
+    background: #333333;
+}
+
+.section-header p {
+    margin: 0;
+    color: #FFD662;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.section-header h1 {
+    margin: 0;
+    color: #000000;
+    font-size: 80px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+@media (max-width: 575.98px) {
+    .section-header h1 {
+        font-size: 50px;
+    }
+}
+
+/**********************************/
+/********** Feature CSS ***********/
+/**********************************/
+#feature {
+    position: relative;
+    padding: 40px 0;
+    background: #ffffff;
+    height: 500px;
+    overflow: hidden;
+}
+
+#feature .col-md-4:first-child .product-feature {
+    text-align: right;
+}
+
+#feature .product-feature {
+    position: relative;
+    width: 100%;
+    float: left;
+    margin-bottom: 30px;
+}
+
+#feature .product-feature:last-child {
+    margin: 0;
+}
+
+#feature .product-icon {
+    position: relative;
+    width: 60px;
+    height: inherit;
+    float: left;
+}
+
+#feature .product-icon i {
+    color: #FFD662;
+    font-size: 40px;
+    margin-top: 5px;
+}
+
+#feature .product-content {
+    position: relative;
+    width: calc(100% - 60px);
+    float: left;
+}
+
+#feature .product-feature h2 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+#feature .product-feature p {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+#feature .product-img {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#feature .product-img img {
+    width: 100%;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* added transition effect */
+}
+
+#feature .product-img img:hover {
+    transform: scale(1.1); /* added hover effect */
+    opacity: 0.8; /* added hover effect */
+}
+
+@media (max-width: 767.98px) {
+    #feature .col-md-4:first-child .product-feature {
+        text-align: left;
+    }
+    
+    #feature .col-md-4:first-child .product-feature .product-icon {
+        float: left;
+    }
+    
+    #feature .col-md-4:first-child .product-feature .product-content {
+        float: right;
+    }
+    
+    #feature .product-img img {
+        margin: 45px 0;
+    }
+}

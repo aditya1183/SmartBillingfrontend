@@ -1,0 +1,27 @@
+#header {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+.header-content h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.header-content h2 span {
+    color: #007bff;
+}
+
+.header-content .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.header-img img {
+    max-width: 100%;
+    height: auto;
+}

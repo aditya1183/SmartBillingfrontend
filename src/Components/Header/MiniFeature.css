@@ -1,0 +1,98 @@
+#feature-mini {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.feature-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: #777;
+}
+
+.feature-item .imgg {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+
+/* edit ccss */
+
+.feature-item {
+    padding: 20px;
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: transaction-effect 2s ease-in-out infinite;
+  }
+  
+  .feature-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .imgg:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  @keyframes transaction-effect {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+  .feature-item {
+    padding: 30px;
+    width: 95%;
+    margin: 25px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: #f7f7f7;
+  }
+  
+  .feature-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease-in-out;
+    background-color: #e6e6e6;
+  }
+  
+  .imgg:hover {
+    transform: scale(1.2);
+    opacity: 0.9;
+    transition: all 0.4s ease-in-out;
+  }

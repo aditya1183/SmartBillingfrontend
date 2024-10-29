@@ -5,7 +5,12 @@ import axios from "axios";
 import { FaUserCircle } from "react-icons/fa";
 import { IoSettingsSharp } from "react-icons/io5";
 import { MdOutlineSecurity } from "react-icons/md";
-import { redirect, useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import "./Seetings.css"; // Create this file for custom styles
+// import logoimage from "../Components/img/adminpageimg.png";
+import logoimage from "../Components/img/seetingspageimg.png";
+
+
 
 function Setting() {
   const navigate = useNavigate();
@@ -41,160 +46,123 @@ function Setting() {
   useEffect(() => {
     getuserdetails();
   }, [email]);
+
   return (
-    <div>
-      {/* <nav>
-        <Link to="/profileupdate">Profile Upadate</Link>
-        <Link to="/changepassword">Change Password</Link>
-      </nav> */}
-      <nav
-        className="navbar navbar-expand-lg navbar-light bg-light"
-        style={{
-          width: "90%",
-          margin: "2rem auto",
-          fontWeight: "900",
-        }}
-      >
-        <div className="container">
+    <div className="settings-container container mt-5">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light rounded shadow-sm">
+        <div className="container-fluid">
           <div className="navbar-nav">
-            <FaUserCircle
-              style={{
-                fontSize: "30px",
-                display: "flex",
-                alignItems: "center",
-                marginTop: ".5rem",
-                marginRight: ".5rem",
-              }}
-            />
+            <FaUserCircle className="icon-size me-2" />
             <Link to="/update-profile" className="nav-item nav-link">
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: "20px",
-                  }}
-                >
-                  <IoSettingsSharp />
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    paddingLeft: ".5rem",
-                  }}
-                >
-                  Profile Update
-                </div>
+              <div className="d-flex align-items-center">
+                <IoSettingsSharp className="me-2" />
+                Profile Update
               </div>
             </Link>
             <Link to="/change-password" className="nav-item nav-link">
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: "20px",
-                  }}
-                >
-                  <MdOutlineSecurity />
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    paddingLeft: ".5rem",
-                  }}
-                >
-                  Change Password
-                </div>
+              <div className="d-flex align-items-center">
+                <MdOutlineSecurity className="me-2" />
+                Change Password
               </div>
             </Link>
           </div>
         </div>
       </nav>
-      <div
-        style={{
-          width: "90%",
-          margin: " 2rem auto",
-        }}
-      >
-        {userdata.role == "admin" ? <h1>Admin</h1> : <></>}
-        {userdata.role === "manager" ? <h1>Manager</h1> : <></>}
-        <h1
+
+      <div className="profile-section mt-4 p-4 bg-white rounded shadow-sm">
+        {userdata.role === "admin" && (
+          <h2 className="text-primary mb-3" style={{ textAlign: "center" }}>
+            Admin
+          </h2>
+        )}
+        {userdata.role === "manager" && (
+          <h2 className="text-success mb-3" style={{ textAlign: "center" }}>
+            Manager
+          </h2>
+        )}
+
+        <h3 className="mb-4" style={{ textAlign: "center" }}>
+          Basic Profile
+        </h3>
+
+        <div
           style={{
-            marginBottom: "1rem",
+            display: "flex",
+            justifyContent: "space-between",
           }}
         >
-          Basic Profile
-        </h1>
-
-        {userdata && (
-          <div
-            style={{
-              fontSize: "1.5rem",
-            }}
-          >
-            <p>First Name : {userdata.firstname}</p>
-            <p>Last Name : {userdata.lastname}</p>
-            <p>User Name : {userdata.username}</p>
-            <p>Phone : {userdata.phone}</p>
-            <p> Email : {userdata.email}</p>
-            <p>Id : {userdata._id}</p>
+          <div>
+            {userdata && (
+              <div className="profile-details">
+                <p>
+                  <strong>First Name:</strong> {userdata.firstname}
+                </p>
+                <p>
+                  <strong>Last Name:</strong> {userdata.lastname}
+                </p>
+                <p>
+                  <strong>Username:</strong> {userdata.username}
+                </p>
+                <p>
+                  <strong>Phone:</strong> {userdata.phone}
+                </p>
+                <p>
+                  <strong>Email:</strong> {userdata.email}
+                </p>
+                <p>
+                  <strong>Id:</strong> {userdata._id}
+                </p>
+              </div>
+            )}
           </div>
-        )}
-        {/* <Link to="/profileupdate" className="btn btn-primary">
-      Update
-    </Link> */}
+          <div>
+            <img
+              src={logoimage}
+              alt="logoimage"
+              style={{
+                height: "30vh",
+                marginBottom: "2vh",
+              }}
+            />
+          </div>
+        </div>
 
         <Link
           to="/update-profile"
-          className="btn btn-primary btn-block"
-          style={{
-            padding: "1rem 3rem",
-          }}
+          className="btn btn-primary btn-block mt-4"
           data={userdata}
         >
-          Update
+          Update Profile
         </Link>
 
-        {"user" in localStorage && (
+        {user && (
           <>
-            {userdata.role === "admin" ? (
-              <Link
-                to="/admin"
-                className="btn btn-primary btn-block"
-                style={{
-                  padding: "1rem 3rem",
-                }}
-                data={userdata}
-              >
-                Admin Page
-              </Link>
-            ) : (
-              <></>
+            {userdata.role === "admin" && (
+              <>
+                <Link
+                  to="/admin"
+                  className="btn btn-danger btn-block mt-3"
+                  data={userdata}
+                >
+                  Admin Page
+                </Link>
+                <Link
+                  to="/employee"
+                  className="btn btn-info btn-block mt-3"
+                  data={userdata}
+                >
+                  Manager Page
+                </Link>
+              </>
             )}
-            {userdata.role === "manager" ? (
+            {userdata.role === "manager" && (
               <Link
                 to="/employee"
-                className="btn btn-primary btn-block"
-                style={{
-                  padding: "1rem 3rem",
-                }}
+                className="btn btn-info btn-block mt-3"
                 data={userdata}
               >
                 Manager Page
               </Link>
-            ) : (
-              <></>
             )}
           </>
         )}

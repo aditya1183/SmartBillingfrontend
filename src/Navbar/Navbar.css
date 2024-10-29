@@ -1,0 +1,36 @@
+
+
+ @media (max-width: 900px) {
+  .navlink-container {
+    position: fixed;
+    right: 0;
+    padding: 30px 40px;
+    background-color:#efefef;
+     /* height: 100vh;  */
+transform: translateX(100%);
+    transition: 0.3s;
+    z-index: 999;
+  }
+  .navlink-container.active {
+    transform: translateX(0);
+  }
+} 
+
+
+/* original media query for max-width 900px */
+
+
+
+/* original media query for max-width 900px */
+
+/* new media query for width range between 750px and 900px */
+@media (min-width: 750px) and (max-width: 900px) {
+  .navlink-container {
+    display: none; /* show the navbar */
+  }
+  .navbar-toggler {
+    display: block; /* hide the hamburger menu */
+  }
+  
+}
+

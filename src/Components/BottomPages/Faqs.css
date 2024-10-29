@@ -1,0 +1,93 @@
+#faqs {
+    position: relative;
+    padding: 90px 0;
+    background: #ffffff;
+}
+
+#faqs .faqs-text {
+    position: relative;
+    width: 100%;
+}
+
+@media(max-width: 767.98px) {
+    #faqs .faqs-text {
+        margin-bottom: 30px;
+    }
+}
+
+#faqs .faqs-text h2 {
+    position: relative;
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+#faqs .faqs-text h2::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background: #333333;
+}
+
+#faqs .faqs-text p:last-child {
+    margin: 0;
+}
+
+#faqs .card {
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 0;
+}
+
+#faqs .card:last-child {
+    margin-bottom: 0;
+}
+
+#faqs .card-header {
+    padding: 0;
+    border: none;
+}
+
+#faqs .card-header a {
+    display: block;
+    width: 100%;
+    padding: 10px 15px 12px 15px;
+    color: #555555;
+    font-size: 16px;
+    font-weight: 400;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+}
+
+#faqs .card-header [data-toggle="collapse"]:after {
+    font-family: 'font Awesome 5 Free';
+    content: "\f067";
+    float: right;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 900;
+    transition: .3s;
+}
+
+#faqs .card-header [data-toggle="collapse"][aria-expanded="true"]:after {
+    font-family: 'font Awesome 5 Free';
+    content: "\f068";
+    float: right;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 900;
+    transition: .3s;
+}
+
+#faqs .card-body {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid;
+    border-color: transparent #eeeeee #eeeeee #eeeeee;
+}

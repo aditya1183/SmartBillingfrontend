@@ -3,9 +3,10 @@ import { useAuth } from "../Context/AuthContextprovider";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { toast } from "react-toastify";
 
 function ProfileUpdate() {
-  const { userdetail } = useAuth();
+  const { userdetail, auth, setuserdetail, setAuth } = useAuth();
   console.log(userdetail);
 
   const [firstname, setfirstname] = useState(userdetail.firstname);
@@ -17,24 +18,32 @@ function ProfileUpdate() {
   const [error, setError] = useState("");
   const id = userdetail._id;
   const navigate = useNavigate();
-  
+  const emaill = auth?.email;
+  const usernamee = auth?.username;
+
   const updateuserprofile = async (e) => {
     setIsLoading(true);
     setError("");
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        "http://localhost:8082/api/v1/user/updateuser",
-        { firstname, lastname, phone, id },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
+      if (emaill || usernamee) {
+        const response = await axios.post(
+          "http://localhost:8082/api/v1/user/updateuser",
+          { firstname, lastname, phone, id },
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        if (response.status === 200) {
+          toast.info("Profile Updated Sucessfully ...")
+          return navigate("/setting");
         }
-      );
-      if (response.status === 200) {
-        return navigate("/setting");
+      } else {
+        setAuth({});
+        return navigate("/");
       }
     } catch (error) {
       setError(error.message);

@@ -1,0 +1,110 @@
+
+
+.table-container {
+  max-height: 400px; /* Adjust as needed */
+  overflow-y: auto;
+  border-radius: 8px; /* Rounded corners */
+  border: 1px solid #dee2e6; /* Border color similar to Bootstrap */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+  margin-top: 20px; /* Space above the table */
+  background-color: #ffffff; /* White background for the table container */
+}
+
+/* Table Styles */
+.table {
+  margin-bottom: 0; /* Remove bottom margin for consistent spacing */
+}
+
+.table thead th {
+  background-color: #f8f9fa; /* Light background for table headers */
+  font-weight: bold;
+  text-align: center; /* Center-align table headers */
+}
+
+.table td, .table th {
+  vertical-align: middle; /* Center-align cell contents vertically */
+}
+
+.table td {
+  text-align: center; /* Center-align cell contents horizontally */
+  word-wrap: break-word; /* Handle long words gracefully */
+}
+
+/* Accordion Styles */
+.accordion-button {
+  background-color: #007bff; /* Primary button color */
+  color: #ffffff; /* Text color for the button */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Rounded corners for the button */
+}
+
+.accordion-button:not(.collapsed) {
+  color: #ffffff; /* Text color for the expanded state */
+  background-color: #0056b3; /* Darker background color when expanded */
+}
+
+.accordion-body {
+  max-height: 300px; /* Adjust as needed */
+  overflow-y: auto;
+  background-color: #f8f9fa; /* Light background for accordion body */
+}
+
+.accordion-body ul {
+  list-style: none; /* Remove default list styling */
+  padding-left: 0; /* Remove default padding */
+}
+
+.accordion-body li {
+  border: 1px solid #dee2e6; /* Border color for list items */
+  border-radius: 8px; /* Rounded corners for list items */
+  margin-bottom: 10px; /* Space between list items */
+  padding: 10px; /* Padding inside list items */
+  background-color: #ffffff; /* White background for list items */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+/* Sidebar Styles */
+.sidebar {
+  background-color: #f8f9fa; /* Light background for sidebar */
+  padding: 20px; /* Padding inside the sidebar */
+  border-right: 1px solid #dee2e6; /* Border on the right side */
+}
+
+/* Button Styles */
+button {
+  width: 100%; /* Full width buttons */
+  border-radius: 8px; /* Rounded corners for buttons */
+}
+
+@media (max-width: 768px) {
+    .table-container {
+      max-height: 400px; /* Set a maximum height for the table */
+      overflow-y: auto;  /* Enable vertical scroll */
+    }
+  }
+  .table-container {
+    max-height: 400px; /* Adjust as needed */
+    overflow-y: auto;
+  }
+  
+  .table-container table {
+    width: 100%;
+  }
+  
+  .accordion-button {
+    font-weight: bold;
+  }
+  
+  .accordion-body {
+    max-height: 200px; /* Adjust as needed */
+    overflow-y: auto;
+  }
+  
+  .table thead th {
+    white-space: nowrap;
+  }
+  
+  .table td {
+    word-wrap: break-word;
+  }
+  

@@ -8,6 +8,15 @@ import { useAuth } from "../../Context/AuthContextprovider";
 import { redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+export async function signuploader() {
+  const user = JSON.parse(localStorage.getItem("user"));
+  if (user) {
+    return redirect("/");
+  }
+
+  return null;
+}
+
 function Signup() {
   const navigate = useNavigate();
   const { auth, setAuth } = useAuth();

@@ -53,8 +53,11 @@ export async function employeeloader() {
   if ("user" in localStorage) {
     const user = JSON.parse(localStorage.getItem("user"));
     const userrole = user.role;
-    if (userrole !== "manager") {
-      return redirect("/");
+    // if (userrole !== "manager") {
+    //   return redirect("/");
+    // }
+    if (userrole === "manager" || userrole === "admin") {
+      return null;
     }
   }
 

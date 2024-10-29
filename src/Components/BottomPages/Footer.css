@@ -1,0 +1,35 @@
+#footer {
+  position: relative;
+  padding: 30px 0;
+  background: #222222;
+}
+
+#footer .col-md-6:first-child p {
+  text-align: left;
+}
+
+#footer .col-md-6:last-child p {
+  text-align: right;
+}
+
+@media (max-width: 767.98px) {
+  #footer .col-md-6:first-child p,
+  #footer .col-md-6:last-child p {
+    text-align: center;
+  }
+}
+
+#footer p {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+#footer p a {
+  font-weight: 700;
+}
+
+#footer p a:hover {
+  color: #ffffff;
+}

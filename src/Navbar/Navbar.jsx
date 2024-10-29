@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, Navigate, Outlet } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useAuth } from "../Context/AuthContextprovider";
 import { Button } from "bootstrap";
+import "./Navbar.css";
 
 const Navbar = () => {
   const { auth, setAuth } = useAuth();
@@ -14,15 +15,25 @@ const Navbar = () => {
     console.log(auth.email);
     return;
   };
+
+  const [munuToggler, setmenutoggle] = useState(false);
+
   return (
-    <div id="nav">
+    <div
+      id="nav"
+      style={{
+        position: "relative",
+      }}
+    >
       <div
         className="navbar navbar-expand-md bg-light navbar-light"
         style={{
           display: "flex",
           justifyContent: "space-between",
           fontSize: "x-large",
-          marginTop: ".5rem",
+          position: "sticky",
+          top: "0",
+          zIndex: 999,
         }}
       >
         <div>
@@ -43,12 +54,24 @@ const Navbar = () => {
             className="navbar-toggler"
             data-toggle="collapse"
             data-target="#navbarCollapse"
+            onClick={() => {
+              {
+                setmenutoggle(!munuToggler);
+              }
+            }}
+            style={{
+              outline: "unset",
+            }}
           >
             <span className="navbar-toggler-icon"></span>
           </button>
 
           <div
-            className="collapse navbar-collapse justify-content-between"
+            className={
+              munuToggler
+                ? " navbar-collapse justify-content-between navlink-container active"
+                : " navbar-collapse justify-content-between navlink-container"
+            }
             id="navbarCollapse"
           >
             <ul className="navbar-nav ml-auto">
@@ -74,9 +97,9 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <a href="#contact" className="nav-link">
+                <Link to="/contactus" className="nav-link">
                   Contact
-                </a>
+                </Link>
               </li>
               {!auth.email && (
                 <li className="nav-item">
@@ -98,7 +121,7 @@ const Navbar = () => {
                       style={{
                         border: "none",
                         background: "transparent",
-                        marginTop: ".2rem",
+                        marginTop: ".5rem",
                       }}
                       onClick={handlelogout}
                     >
@@ -119,3 +142,8 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
+

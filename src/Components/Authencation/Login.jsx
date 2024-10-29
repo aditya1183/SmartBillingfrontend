@@ -1,12 +1,28 @@
 import { useState } from "react";
 import "./LoginForm.css";
 
-import { Link, redirect, useLocation, useNavigate } from "react-router-dom";
+import {
+  json,
+  Link,
+  redirect,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 import { useAuth } from "../../Context/AuthContextprovider";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import { LOGIN_URL } from "../../constants";
+
+export async function loginloader() {
+  const user = JSON.parse(localStorage.getItem("user"));
+  if (user) {
+    return redirect("/");
+  }
+
+  return null;
+}
 
 function Login() {
   const { auth, setAuth } = useAuth();
@@ -35,16 +51,19 @@ function Login() {
       );
       console.log(response.data);
       if (response.status == 200) {
-        console.log(response.data);
         setAuth(response.data);
         localStorage.setItem("user", JSON.stringify(response.data));
+        const user = response.data.username;
 
         if (response.data.role === "admin") {
-          return navigate("/admin");
+          toast.info(`Welcome back ${user} Admin`);
+          return navigate("/setting");
         }
         if (response.data.role == "manager") {
-          return navigate("/employee");
+          toast.info(`Welcome back ${user} Manager`);
+          return navigate("/setting");
         } else {
+          toast.info("Login Sucessfully");
           return navigate("/");
         }
       }
@@ -67,11 +86,11 @@ function Login() {
               </h1>
 
               <div className="form-group mb-3">
-                <label htmlFor="email">Email / Username / Phone No</label>
+                <label htmlFor="email">Email / Username </label>
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Enter Email / Password / UserName "
+                  placeholder="Enter Email  / UserName "
                   name="email"
                   id="email"
                   value={email}

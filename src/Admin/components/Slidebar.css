@@ -1,0 +1,116 @@
+/* src/components/Slidebar.css */
+.sidebar {
+  position: fixed; /* Fixed position to stay on the left side */
+  width: 250px; /* Default width */
+  height: 100vh;
+  background: #fff;
+  overflow: hidden;
+  transition: width 0.3s;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar:hover {
+  width: 250px; /* Expand width on hover */
+}
+
+.nav-items {
+  flex: 1;
+}
+
+.sidebar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 0;
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  padding: 15px;
+  transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background: #f3f3f3;
+}
+
+.sidebar ul li a .icon {
+  min-width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+.sidebar ul li a .text {
+  flex: 1;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo .icon {
+  font-size: 2em;
+}
+
+.logo .text {
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.bottom {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.bottom ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom ul li {
+  margin: 0;
+}
+
+.bottom ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+}
+
+.bottom ul li a:hover {
+  background: #f3f3f3;
+}
+
+.bottom ul li a .icon {
+  min-width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+.bottom ul li a .text {
+  flex: 1;
+  font-size: 0.9em;
+}

@@ -1,0 +1,48 @@
+.transaction-page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .transaction-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-transform: capitalize;
+  }
+  
+  .status.completed {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .status.pending {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .status.failed {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  .details-button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .details-button:hover {
+    background-color: #0056b3;
+  }

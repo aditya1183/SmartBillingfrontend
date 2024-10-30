@@ -1,0 +1,90 @@
+.inventory-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .page-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .product-form {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .form-title {
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  
+  .form-label {
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .form-input, .form-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .form-select {
+    background: #f9f9f9;
+  }
+  
+  .submit-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .product-table th, .product-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .product-table th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .product-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .details-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .details-link:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,0 +1,65 @@
+/* Base styling */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa; /* Light background color */
+  padding: 10px; /* Add padding for better spacing on small screens */
+}
+
+/* Navbar content styling */
+.navbar-content {
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #ffffff; /* White background for content area */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 100%;
+  max-width: 1000px; /* Set a max-width to prevent content from stretching too wide */
+}
+
+/* Title styling */
+.navbar-title {
+  font-size: 1.5rem; /* Adjusted size for better readability on smaller screens */
+  color: #333; /* Dark text color */
+  margin-bottom: 10px;
+}
+
+/* Subtitle styling */
+.navbar-subtitle {
+  font-size: 1rem; /* Adjusted size for better readability on smaller screens */
+  color: #666; /* Medium gray text color */
+  margin-bottom: 20px;
+}
+
+/* Media queries for responsiveness */
+
+/* For devices with a max-width of 768px (e.g., tablets) */
+@media (max-width: 768px) {
+  .navbar-content {
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .navbar-title {
+    font-size: 1.25rem; /* Smaller title font size for tablets */
+  }
+
+  .navbar-subtitle {
+    font-size: 0.9rem; /* Smaller subtitle font size for tablets */
+  }
+}
+
+/* For devices with a max-width of 480px (e.g., mobile phones) */
+@media (max-width: 480px) {
+  .navbar-content {
+    padding: 10px; /* Further reduce padding for mobile phones */
+  }
+
+  .navbar-title {
+    font-size: 1rem; /* Smaller title font size for mobile phones */
+  }
+
+  .navbar-subtitle {
+    font-size: 0.8rem; /* Smaller subtitle font size for mobile phones */
+  }
+}

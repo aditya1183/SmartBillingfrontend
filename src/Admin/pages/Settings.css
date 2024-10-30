@@ -1,0 +1,95 @@
+.settings-container {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .settings-sidebar {
+    width: 250px;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+  }
+  
+  .settings-sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .settings-sidebar ul li {
+    padding: 10px 0;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .settings-content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .profile-picture-section {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    margin-bottom: 10px;
+  }
+  
+  .upload-btn {
+    background-color: #6c63ff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .settings-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .form-actions {
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .cancel-btn, .save-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cancel-btn {
+    background-color: #f0f0f0;
+  }
+  
+  .save-btn {
+    background-color: #6c63ff;
+    color: white;
+  }

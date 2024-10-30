@@ -1,0 +1,88 @@
+/* Main container styling */
+.customer-page {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Heading */
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Table styling */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table th, .table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  /* Header styling */
+  .table th {
+    background-color: #f2f2f2;
+    color: #555;
+  }
+  
+  /* Table rows styling */
+  .table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Ledger button styling */
+  .ledger-btn {
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ledger-btn:hover {
+    background-color: #574bd8;
+  }
+  
+  /* Pagination container */
+  .pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  /* Pagination buttons */
+  .pagination button {
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pagination button:hover {
+    background-color: #574bd8;
+  }
+  
+  /* Pagination text */
+  .pagination span {
+    font-size: 16px;
+    color: #333;
+    margin-left: 20px;
+  }
